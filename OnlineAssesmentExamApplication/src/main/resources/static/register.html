@@ -1,0 +1,28 @@
+<html>
+<head>
+    <title>Registration Page</title>
+</head>
+<body bgcolor="Lightskyblue">  
+<br>  
+<br>   
+ <form id = "registration" action = "/OnlineAssessment/registration/do" method="post">  
+ <h2>Registration Form</h2>
+<label> First Name </label>         
+<input type="text" id="firstname" name="name" pattern="[A-Za-z].{1,}" class="form-control" required/> <br> <br>  
+  
+<label> Last Name </label>         
+<input type="text" id="lastname" name="lastName" pattern="[A-Za-z].{1,}" class="form-control" required/> <br> <br>    
+
+ <label> Email ID </label>
+ <input type="email" id="email" name="email" class="form-control" required/> <br>    
+<br> <br>  
+
+<label> Password </label>
+<input type="Password" id="password" name="password" pattern=".{8,}" class="form-control" > <br>   
+<br> <br>   
+
+ <input type="submit" value="REGISTER" id="register" required class="form-control"/>
+
+ </form>>
+</body>
+</html>
