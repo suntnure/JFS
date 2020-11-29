@@ -1,0 +1,46 @@
+<style>
+    table, th, td {
+      border: 1px solid black;
+    }
+    </style>
+    <br>
+<title>Employee List</title>
+ <div class="form-group">
+   <label for="filter">Filter by :</label><br>
+  <input type="text" id="filter" class="form-control" placeholder="Filter by name" [(ngModel)]="searchterm"/>
+</div>
+<br>
+
+
+        <p>Total no of employees :{{employeecount}}</p>
+       <br>
+       
+<table >
+    <tr>
+      <th>Emp ID</th>
+      <th>Name</th>
+      <th>Location</th>
+      <th>Email</th>
+      <th>Mobile</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+    <tr *ngFor="let employee of employee | employeeFilter:searchterm" >
+        
+      <td >
+          <button (click)="showdetails(employee.id)">{{ employee.id}}</button>
+        </td>
+      <td>{{ employee.name }}</td>
+      <td>{{ employee.location }}</td>
+      <td>{{employee.email}}</td>
+       <td>{{employee.mobile}}</td>  
+      <td>
+      <button (click)="deleteEmployee(employee.id)" >Delete{{employee.id}}</button>
+      
+      </td>
+      <td>
+        <button (click)="editemployee(employee.id) " >Edit{{employee.id}}</button>
+      </td>
+    </tr>
+  </table>
+  

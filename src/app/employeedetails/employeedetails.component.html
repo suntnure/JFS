@@ -1,0 +1,24 @@
+<title>Employee Details</title>
+<h1>Employee Details</h1>
+<form #userForm = "ngForm">
+    <div  class="form-group" >
+        <label for="id" >ID: {{userModel.id}}</label>
+         </div>
+         <div  class="form-group" >
+            <label for="name" >Name: {{userModel.name}}</label>
+             </div>
+             <div  class="form-group" >
+                <label for="location" >Location: {{userModel.location}}</label>
+                 </div>
+                 <div  class="form-group" >
+                    <label for="email" >Email: {{userModel.email}}</label>
+                     </div>
+                     <div  class="form-group" >
+                        <label for="mobile" >Mobile: {{userModel.mobile}}</label>
+                         </div>
+                         <br>
+                         <a>
+                         <button (click)="back()" id="back">Back</button>
+                        </a>
+</form>
+

@@ -1,0 +1,36 @@
+
+<title>Edit Employee</title>
+<div class="container-fluid">
+    
+    <form  action="/employees"  #userForm = "ngForm"  (ngSubmit)="onSubmit()">
+    
+       
+        
+        
+        <div class="form-group">
+      <label for="name" >Employee Name : </label>
+        <input  type="text" id="name" maxlength="3" name="Employeename" class="form-control" [(ngModel)]="userModel.name" required ><br><br>
+    </div>
+    <div class="form-group">
+        <label for="location" >Location : </label>
+        <input type="text" id="location"  maxlength="3" class="form-control" name="Location" [(ngModel)]="userModel.location" required>
+    </div>
+        <div class="form-group">
+    
+        
+        <label for="email">Email : </label>
+          <input type="text" id="email"  class="form-control" name="Email" [(ngModel)]="userModel.email" required><br>
+          </div>
+          <div class="form-group">
+          <label for="mobile">Mobile : </label>
+          <input type="text" id=mobile maxlength="10" class="form-control" name="Mobile" [(ngModel)]="userModel.mobile" required><br>
+          </div>
+          <div class="form-group">
+          <button  type="submit" id="add"  [disabled]="!myInput.validity.valid" >Submit</button>
+          
+        </div>
+    
+    </form>
+    
+    </div>
+    
